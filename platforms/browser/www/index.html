@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>goStore - C2 Project</title>
+
+    <!-- font Raleway link -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- all css here -->
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/swipebox.css">
+    <!-- font-awesome.min CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- font-awesome.min CSS -->
+    <link rel="stylesheet" href="css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="css/helper.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- main CSS -->
+    <link rel="stylesheet" href="css/main/main.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<!-- Status bar overlay for fullscreen mode-->
+<div class="statusbar-overlay"></div>
+<!-- Panels overlay-->
+<div class="panel-overlay"></div>
+<!-- Left panel with reveal effect-->
+<div class="panel panel-left panel-reveal menubg">
+    <div class="mainmenu">
+        <div class="menu">
+            <ul>
+                <li class="addAuth">
+                    <a href="#" class="noLink">
+                        Hello,<span class="loginUser"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html" class="close-panel"><i class="pe-7s-home pe-fw"></i> HOME</a>
+                </li>
+                <li>
+                    <a href="about.html" class="close-panel"><i class="pe-7s-user pe-fw"></i> About Us</a>
+                </li>
+                <li class="addAuth">
+                    <a href="cart.html" class="close-panel"><i class="pe-7s-cart pe-fw"></i>Cart</a>
+                </li>
+                <li class="removeAuth">
+                    <a href="#" class="open-login-screen close-panel"><i
+                            class="pe-7s-back-2 pe-fw"></i>Login</a>
+                </li>
+                <li class="addAuth">
+                    <a href="#" id="logoutAction">
+                        <i class="pe-7s-lock pe-fw"></i> Logout?
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Menu end -->
+</div>
+<!-- login screen  start-->
+<div class="login-screen">
+    <div class="view">
+        <div class="page">
+            <div class="page-content login-screen-content registerbody">
+                <div class="register-content">
+                    <a href="#" class="close-login-screen floatright"><i class="fa fa-times"></i></a>
+                    <div class="inputbox">
+                        <span>Email:</span><br>
+                        <input type="email" name="email" id="email_input" placeholder="Enter your email">
+                    </div>
+                    <div class="inputbox">
+                        <span>Password:</span><br>
+                        <input type="password" name="password" id="pw_input" placeholder="Enter your password">
+                    </div>
+                    <div class="inputbox">
+                        <div class="custom_msg">
+                            <p></p>
+                        </div>
+                        <div class="custom_loader">
+                            <div class="lds-ellipsis">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inputbox">
+                        <button id="do_action_login" class="button button-big">Login</button>
+                    </div>
+<!--                    <p>-->
+<!--                        Don’t have an account? <a data-popup=".popup-register" class="open-popup" href="#">Sign Up</a>-->
+<!--                    </p>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- login screen  start-->
+<!-- resister popup start-->
+<!--<div class="popup popup-register">-->
+<!--    <div class="registerbody">-->
+<!--        <a href="#" class="close-popup closebutton"><i class="fa fa-times"></i></a>-->
+<!--        <div class="register-content">-->
+<!--            <div class="inputbox">-->
+<!--                <span>Full Name:</span><br>-->
+<!--                <input type="text" name="reg_name" id="reg_name_input" placeholder="Enter your name">-->
+<!--            </div>-->
+<!--            <div class="inputbox">-->
+<!--                <span>Email:</span><br>-->
+<!--                <input type="email" name="reg_email" id="reg_email_input" placeholder="Enter your email">-->
+<!--            </div>-->
+<!--            <div class="inputbox">-->
+<!--                <span>Password:</span><br>-->
+<!--                <input type="password" name="reg_password" id="reg_pw_input" placeholder="Enter your password">-->
+<!--            </div>-->
+<!--            <div class="inputbox">-->
+<!--                <div class="custom_msg">-->
+<!--                    <p></p>-->
+<!--                </div>-->
+<!--                <div class="custom_loader">-->
+<!--                    <div class="lds-ellipsis">-->
+<!--                        <div></div>-->
+<!--                        <div></div>-->
+<!--                        <div></div>-->
+<!--                        <div></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="inputbox">-->
+<!--                <button id="do_action_register" class="button button-big">Register</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!-- resister popup start-->
+<!-- Views-->
+<div class="views">
+    <!-- Your main view, should have "view-main" class-->
+    <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="link icon-only open-panel"><img src="img/menu.png" alt=""></a>
+                </div>
+                <!-- We have home navbar without left link-->
+                <div class="center sliding"><img class="mmMainLogo" src="img/main/logo.png" alt=""></div>
+                <div class="right">
+                    <a href="#" data-panel="right" class="link icon-only open-login-screen removeAuth"><img src="img/menu2.png"
+                                                                                                 alt=""></a>
+                </div>
+            </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+            <!-- Page, data-page contains page name-->
+            <div data-page="index" class="page">
+                <!-- Scrollable page content-->
+                <div class="page-content">
+                    <!-- slider area start-->
+                    <div class="slider-area">
+                        <div class="ks-slider-custom">
+                            <div data-pagination=".swiper-pagination" data-space-between="0"
+                                 data-next-button=".swiper-button-next" data-prev-button=".swiper-button-prev"
+                                 data-pagination-clickable="true" class="swiper-container swiper-init">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="img/main/slider/bg2.png" alt="">
+                                        <div class="slide-text">
+                                            <h2>The <span>Store</span><br>Of The Future</h2>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/main/slider/bg3.png" alt="">
+                                        <div class="slide-text">
+                                            <h2><span>Cashier-less</span><br>Store</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- slider area end-->
+                    <!-- about us area start-->
+                    <div class="standard-row">
+                        <div class="section-title">
+                            <h3>What Is <strong>GoStore?</strong></h3>
+                        </div>
+                        <div class="stander-content">
+                            <div class="about-content">
+                                <p class="alignjust">GoStore is a new kind of store with no checkout required. We
+                                    created the world’s most advanced shopping technology so you never have to wait in
+                                    line. With our Just Walk Out Shopping experience, simply use the GoStore app to
+                                    enter the store, take the products you want, and go! No lines, no checkout. (No,
+                                    seriously.)</p>
+                                <a href="about.html" class="floatright">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-row">
+                        <p>2019 <sup>&reg;</sup> All Rights Reserved - Maroun Melhem | Peter Bardawil | Louay Ayoub. C2
+                            Project.
+                            CNAM Lebanon</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Js -->
+<!-- jquery-1.11.3.min js -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<!-- Path to Framework7 Library JS -->
+<script type="text/javascript" src="js/framework7.min.js"></script>
+<!--jquery.swipebox js -->
+<script type="text/javascript" src="js/jquery.swipebox.js"></script>
+<!--jquery.mixitup js -->
+<script src="js/jquery.mixitup.min.js"></script>
+<!-- Path to your app js -->
+<script type="text/javascript" src="js/my-app.js"></script>
+</body>
+</html>

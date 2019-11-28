@@ -1,0 +1,57 @@
+/* large mobie. */
+@media (min-width: 320px) and (max-width:359px) {
+.cartpage-pro-dec {
+  float: left;
+  width: 186px;
+}
+
+
+}/* large mobie. */
+@media (min-width: 459px) and (max-width:748px) {
+
+}
+
+/* Tablet desktop :768px. */
+@media (min-width: 749px) {
+.slide-text h2 {
+  font-size: 50px;
+  line-height: 60px;
+}
+.slide-text {
+  bottom: 50%;
+  color: #ffffff;
+  left: 0;
+  line-height: 22px;
+  margin-bottom: -61px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+.cartpage-image {
+  float: left;
+  width: 206px;
+}
+.cartpage-pro-dec {
+  margin-left: 24px;
+  width: 383px;
+}
+.product-color, .product-name {
+  font-size: 20px;
+  padding: 10px 0;
+}
+.product-color label {
+  font-size: 20px;
+}
+.cart-delete {
+  font-size: 41px;
+  left: 58%;
+  top: 117px;
+}
+.product-price {
+  font-size: 20px;
+  right: 0;
+  top: 78px;
+}
+
+}
+
