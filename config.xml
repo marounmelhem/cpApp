@@ -2,7 +2,7 @@
 <widget id="com.goStore.cpapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>cPApp</name>
     <description>
-        A basic Framework7 template for PhoneGap.
+        cpApp is an Amazon Go proof of concept - Maroun Melhem | Peter Bardawil | Louay Ayoub. C2 Project. CNAM Lebanon
     </description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
         Apache Cordova Team
